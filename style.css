@@ -1,0 +1,412 @@
+/* ===========================================
+   BIKECRAFT - Styles
+   Layout original do curso Origamid
+   + Seções extras implementadas por mim
+   =========================================== */
+
+/* ============================================
+   PARTE 1: LAYOUT ORIGINAL DO CURSO
+   Usando CSS Grid e Flexbox
+   ============================================ */
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0px;
+  background: #f7f7f7;
+  display: grid;
+  gap: 60px;
+  justify-items: center;
+  margin-top: 60px;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  margin-top: 60%;
+}
+
+a {
+  text-decoration: none;
+}
+
+p,
+h1,
+h2,
+h3 {
+  margin: 0px;
+}
+
+p {
+  font-size: 20px;
+  line-height: 1.3;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.menu a {
+  background: #ffffff;
+  padding: 15px 30px;
+  border-radius: 4px;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.conteudo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 1000px;
+}
+
+.introducao {
+  background: #fff;
+  padding: 40px;
+  text-align: right;
+  position: relative;
+  display: grid;
+  gap: 20px;
+  align-content: center;
+  justify-items: end;
+}
+
+.detalhe {
+  width: 60px;
+  height: 4px;
+  background: #e21;
+  position: absolute;
+  top: 30px;
+  right: -30px;
+}
+
+.botao {
+  background: #e21;
+  color: #fff;
+  padding: 15px 30px;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.subtitulo {
+  font-size: 64px;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.2);
+  text-align: right;
+  padding: 40px;
+  align-self: center;
+}
+
+.vantagens {
+  background: #fff;
+  padding: 40px;
+}
+
+.vantagens-item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 10px 20px;
+  padding: 20px;
+}
+
+.vantagens-item p {
+  grid-column: 2;
+}
+
+.rodape {
+  background: #fff;
+  width: 100%;
+  text-align: center;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+/* ============================================
+   PARTE 2: MELHORIAS E SEÇÕES EXTRAS
+   Implementadas além do curso
+   ============================================ */
+
+/* --- Efeitos Hover (Melhoria) --- */
+.menu a {
+  transition: 0.3s;
+}
+
+.menu a:hover {
+  background: #e21;
+  color: #fff;
+}
+
+.botao {
+  transition: 0.3s;
+}
+
+.botao:hover {
+  background: #c91b00;
+  transform: scale(1.05);
+}
+
+/* --- Seção Modelos (CSS Grid - igual vantagens) --- */
+.modelos {
+  width: 100%;
+  max-width: 1000px;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.modelos-titulo {
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #000;
+}
+
+.modelos-lista {
+  background: #fff;
+  padding: 40px;
+}
+
+.modelo-item {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 20px;
+  padding: 20px;
+  border-bottom: 1px solid #f0f0f0;
+  align-items: center;
+  color: #000;
+  transition: 0.3s;
+}
+
+.modelo-item:last-child {
+  border-bottom: none;
+}
+
+.modelo-item:hover {
+  background: #f7f7f7;
+}
+
+.modelo-item img {
+  width: 150px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.modelo-texto h3 {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.modelo-texto p {
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.6);
+  margin-bottom: 10px;
+}
+
+.modelo-preco {
+  font-size: 20px;
+  font-weight: bold;
+  color: #e21;
+}
+
+/* --- Seção Depoimentos (CSS Grid) --- */
+.depoimentos {
+  width: 100%;
+  max-width: 1000px;
+  padding: 60px 20px;
+  box-sizing: border-box;
+}
+
+.depoimentos-titulo {
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #000;
+}
+
+.depoimentos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.depoimento {
+  background: #fff;
+  padding: 30px;
+  border-radius: 4px;
+  margin: 0;
+  border-left: 4px solid #e21;
+}
+
+.depoimento p {
+  font-size: 18px;
+  font-style: italic;
+  color: rgba(0, 0, 0, 0.7);
+  margin-bottom: 20px;
+}
+
+.depoimento footer {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.depoimento strong {
+  font-size: 16px;
+  color: #000;
+}
+
+.depoimento span {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+/* --- Seção Contato (Flexbox) --- */
+.contato {
+  width: 100%;
+  background: #1a1a1a;
+  padding: 60px 20px;
+  box-sizing: border-box;
+}
+
+.contato-conteudo {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contato h2 {
+  font-size: 32px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.contato > .contato-conteudo > p {
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 40px;
+}
+
+.contato-info {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.contato-item {
+  text-align: center;
+}
+
+.contato-item strong {
+  display: block;
+  color: #e21;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.contato-item p {
+  color: #fff;
+  font-size: 16px;
+}
+
+/* --- Rodapé Melhorado --- */
+.creditos {
+  margin-top: 10px;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.creditos strong {
+  color: #e21;
+}
+
+/* ============================================
+   PARTE 3: RESPONSIVIDADE
+   (Implementação extra)
+   ============================================ */
+
+@media (max-width: 900px) {
+  .conteudo {
+    grid-template-columns: 1fr;
+    margin: 0 20px;
+  }
+
+  .conteudo > img {
+    order: -1;
+  }
+
+  .introducao {
+    text-align: center;
+    justify-items: center;
+  }
+
+  .detalhe {
+    position: static;
+    margin-bottom: 10px;
+  }
+
+  .subtitulo {
+    text-align: center;
+    font-size: 48px;
+  }
+
+  .modelos-lista {
+    padding: 20px;
+  }
+
+  .modelo-item {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .modelo-item img {
+    width: 100%;
+    height: 150px;
+  }
+
+  .depoimentos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contato-info {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    gap: 40px;
+    margin-top: 40px;
+  }
+
+  .menu a {
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+
+  .introducao {
+    padding: 30px 20px;
+  }
+
+  .introducao h1 {
+    font-size: 28px;
+  }
+
+  .subtitulo {
+    font-size: 32px;
+    padding: 20px;
+  }
+
+  .vantagens {
+    padding: 20px;
+  }
+
+  .modelos-titulo,
+  .depoimentos-titulo,
+  .contato h2 {
+    font-size: 26px;
+  }
+}
